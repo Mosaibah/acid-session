@@ -1,0 +1,10 @@
+docker build -t iau_db .
+
+docker run -d -p 5432:5432 --name iau_db iau_db
+
+psql -h localhost -U abdo -d iau_db 
+
+
+ALTER TABLE accounts
+ADD CONSTRAINT fk_user
+FOREIGN KEY (user_id) REFERENCES users(user_id);
