@@ -1,6 +1,10 @@
-# Understanding ACID in Databases
+# Understanding ACID in Databases (101)
 
-This presentation was presented at Imam Abdulrahman bin Faisal University.
+This repository contains the materials and commands used in my YouTube tutorial about ACID properties in databases. Here you'll find all the code samples, slides, and setup instructions demonstrated in the video.
+
+🎥 **Watch the Tutorial**: [Understanding ACID Properties in Databases](https://youtu.be/TN_OZ1nocAc)
+
+📑 **View the Slides**: [Presentation Slides](https://github.com/Mosaibah/acid-session/blob/main/ACID%20Presentation.pdf)
 
 ## Setup Docker
 
@@ -9,19 +13,19 @@ Follow these steps to set up Docker for the database:
 1. **Build the Docker Image**
    
    ```bash
-   docker build -t iau_db .
+   docker build -t test_db .
    ```
 
 2. **Run the Docker Container**
    
    ```bash
-   docker run -d -p 5432:5432 --name iau_db iau_db
+   docker run -d -p 5432:5432 --name test_db test_db
    ```
 
 3. **Connect to the PostgreSQL Database**
    
    ```bash
-   psql -h localhost -U abdo -d iau_db
+   psql -h localhost -U abdo -d test_db
    ```
 
 ## Database Commands
@@ -64,7 +68,7 @@ services:
   postgres:
     build: .
     environment:
-      POSTGRES_DB: iau_db 
+      POSTGRES_DB: test_db 
       POSTGRES_USER: abdo
       POSTGRES_PASSWORD: abdo123
     ports:
@@ -87,17 +91,17 @@ Here are some useful commands from `commands.txt`:
 - **Build the Docker Image**
   
   ```bash
-  docker build -t iau_db .
+  docker build -t test_db .
   ```
 
 - **Run the Docker Container**
   
   ```bash
-  docker run -d -p 5432:5432 --name iau_db iau_db
+  docker run -d -p 5432:5432 --name test_db test_db
   ```
 
 - **Connect to PostgreSQL**
   
   ```bash
-  psql -h localhost -U abdo -d iau_db
+  psql -h localhost -U abdo -d test_db
   ```
