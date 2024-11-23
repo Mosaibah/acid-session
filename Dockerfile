@@ -2,7 +2,7 @@
 FROM postgres:16
 
 # Arguments for database configuration
-ARG POSTGRES_DB=iau_db
+ARG POSTGRES_DB=test_db
 ARG POSTGRES_USER=abdo
 ARG POSTGRES_PASSWORD=abdo123
 

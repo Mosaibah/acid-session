@@ -4,7 +4,7 @@ services:
   postgres:
     build: .
     environment:
-      POSTGRES_DB: iau_db 
+      POSTGRES_DB: test_db
       POSTGRES_USER: abdo
       POSTGRES_PASSWORD: abdo123
     ports:
